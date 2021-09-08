@@ -1,5 +1,6 @@
 import hashlib
 import base64
+from producer import *
 
 
 # sha256
@@ -39,3 +40,14 @@ digest_size = 32
 print(hashlib.blake2b(text,digest_size=digest_size).digest())
 print(hashlib.blake2b(text,digest_size=digest_size).hexdigest())
 print(base64.b64encode(hashlib.blake2b(text,digest_size=digest_size).digest()).decode())
+
+hash1 = produce_hash('texto1.txt','h'.encode('utf-8'))
+hash2 = produce_hash('texto2.txt','h'.encode('utf-8'))
+
+print('Hash1: ',hash1)
+print('Hash2: ',hash2)
+
+print(verify('texto1.txt','h'.encode('utf-8'),hash1))
+print(verify('texto1.txt','h'.encode('utf-8'),hash2))
+print(verify('texto2.txt','h'.encode('utf-8'),hash1))
+print(verify('texto2.txt','h'.encode('utf-8'),hash2))
