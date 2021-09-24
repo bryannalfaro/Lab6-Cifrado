@@ -52,9 +52,3 @@ def login(username,password):
                 return 'Contraseña incorrecta'
     if find == False:
         return 'Usuario no encontrado'
-
-
-
-
-
-

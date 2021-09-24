@@ -31,7 +31,7 @@ print("Base64:\t\t", base64.b64encode(hashlib.sha512(text).digest()).decode())
 #blake2b
 print(f"\nCifrado blake2b de la palabra '{word1}'")
 text =  word1.encode('utf-8')
-digest_size = 32
+digest_size = 64
 print("Binario:\t", hashlib.blake2b(text,digest_size=digest_size).digest())
 print("Hexadecimal:\t", hashlib.blake2b(text,digest_size=digest_size).hexdigest())
 print("Base64:\t\t", base64.b64encode(hashlib.blake2b(text,digest_size=digest_size).digest()).decode())
@@ -53,7 +53,7 @@ print("Base64:\t\t", base64.b64encode(hashlib.sha512(text).digest()).decode())
 #blake2b
 print(f"\nCifrado blake2b de la frase '{word2}'")
 text =  word2.encode('utf-8')
-digest_size = 32
+digest_size = 64
 print("Binario:\t", hashlib.blake2b(text,digest_size=digest_size).digest())
 print("Hexadecimal:\t", hashlib.blake2b(text,digest_size=digest_size).hexdigest())
 print("Base64:\t\t", base64.b64encode(hashlib.blake2b(text,digest_size=digest_size).digest()).decode())
@@ -78,7 +78,7 @@ print(f"{txt2} verificado con Hash2: ", verify('texto2.txt','h'.encode('utf-8'),
 input("\nPresione cualquier tecla para continuar...")
 
 #3era parte
-print('TERCERA PARTE: SERVIDOR CIFRADO DE LA INFORMACION')
+print('\nTERCERA PARTE: SERVIDOR CIFRADO DE LA INFORMACION')
 print('1. Registrarse')
 print('2. Login')
 validOptions = [1,2]
