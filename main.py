@@ -26,7 +26,7 @@ print(f"\nCifrado SHA512 de la palabra '{word1}'")
 text =  word1.encode('utf-8')
 print("Binario:\t", hashlib.sha512(text).digest())
 print("Hexadecimal:\t", hashlib.sha512(text).hexdigest())
-print("Base64:\t\t", base64.b64encode(hashlib.sha256(text).digest()).decode())
+print("Base64:\t\t", base64.b64encode(hashlib.sha512(text).digest()).decode())
 
 #blake2b
 print(f"\nCifrado blake2b de la palabra '{word1}'")
@@ -48,7 +48,7 @@ print(f"\nCifrado SHA512 de la frase '{word2}'")
 text =  word2.encode('utf-8')
 print("Binario:\t", hashlib.sha512(text).digest())
 print("Hexadecimal:\t", hashlib.sha512(text).hexdigest())
-print("Base64:\t\t", base64.b64encode(hashlib.sha256(text).digest()).decode())
+print("Base64:\t\t", base64.b64encode(hashlib.sha512(text).digest()).decode())
 
 #blake2b
 print(f"\nCifrado blake2b de la frase '{word2}'")
